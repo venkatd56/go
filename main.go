@@ -4,22 +4,16 @@ import "fmt"
 
 func main() {
 //	var card string = "Ace of Spades"  //Variable declaration and value assignement - long form syntax
-	card := "Ace of Spades"			   // 2nd way of declaring and assigning value - compact form syntax
-	card = "Five of diamonds"		// card variable already initialized in the above step, no need to use := again
+	card := newCard()			   // 2nd way of declaring and assigning value - compact form syntax
 	fmt.Println(card)
 }
 
+func newCard() string {
+	return "Five of Diamonds"
+}
 
-// variable declaration
+// Functions
+// These are similar to func main(), but we have to define the type of the value that the function returns
+// if we are expexting a string, we need to pass the type string in the declaration as show in the above example
 
-// syntax: var card string = "value" 
-
-// var : keyword for creating a variable
-// card: variable name
-// string: variable type, only string type can be assigned to the variable 
-
-// Go is a statically typed language, whenever we define a variable with a type, and this type cannot be changed 
-
-// types in go: bool, int, string, float64
-
-// := only used when creating a new variable, if we are reassigning a new value to an existing variable, no need to use this notation
+// func newCard() string {}
